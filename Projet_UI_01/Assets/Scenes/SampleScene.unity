@@ -783,8 +783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.67645, y: 0.64157104}
-  m_SizeDelta: {x: 175.3924, y: 35.9179}
+  m_AnchoredPosition: {x: -124.4, y: -2.3174}
+  m_SizeDelta: {x: 188.75, y: 35.9179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339287431
 MonoBehaviour:
@@ -2347,7 +2347,10 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: Vivant
+    - m_Text: none
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: life
       m_Image: {fileID: 0}
       m_Color: {r: 0.8962264, g: 0.33397114, b: 0.33397114, a: 1}
     - m_Text: Malade
@@ -3081,7 +3084,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vivant
+  m_text: none
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
