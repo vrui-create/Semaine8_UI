@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class S_Inventaire : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] GridLayoutGroup _Liste;
+    [SerializeField] GameObject Prefable_Iteam;
 
-    // Update is called once per frame
-    void Update()
+    public void Add_Iteam_Grille(Sprite Vimage, string Vname)
     {
-        
+        S_Iteam REF_ITEAM = Prefable_Iteam.GetComponent<S_Iteam>();
+        if (REF_ITEAM != null)
+        {
+            REF_ITEAM.Intialisation_Iteam(Vimage, Vname);
+        }
     }
 }

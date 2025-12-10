@@ -20,7 +20,6 @@ public class S_Cache_un_Element : MonoBehaviour
         {
             RefObjet.SetActive(false);
         }
-        else Debug.LogError("votre objet n'est pas existant");
     }
     
 
