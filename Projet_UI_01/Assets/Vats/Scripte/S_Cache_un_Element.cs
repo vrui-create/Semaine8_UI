@@ -8,7 +8,6 @@ public class S_Cache_un_Element : MonoBehaviour
     {
         if (RefObjet != null)
         {
-            print("yep");
             if(RefObjet.activeSelf) RefObjet.SetActive(false);
             else RefObjet.SetActive(true);
         } 
