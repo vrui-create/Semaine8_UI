@@ -1,69 +1,93 @@
 using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class S_Game_Principale : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler //veiller a implémenter c'est 2 erreur avec clickDroit>
 {
-    Animator zz;
-    bool Securiser = false;
+    [SerializeField] bool Securiser {set; get; }
+    GameObject transform_Central;
+    RectTransform rectTransform_Origine;
+    RectTransform rectTransform;
     S_Game_Principale[] Stack_Script;
+    string Action_Animation;
+    Animator zz;
+
     void Start()
     {
+        
         zz = GetComponent<Animator>();
-        
-        //zz.speed = Random.Range(0.8f, 1.0f);
+        Securiser = false;
         if (zz == null) Debug.LogWarning($"Attention un animator n'est pas présent, veiller a vêrifier dans {this}");
-    }
-    void Update()
-    {
-        
-    }
 
+        transform_Central = GameObject.Find("Target_Center");
+        if (transform_Central != null) 
+        {
+            Debug.Log("trouver");
+            rectTransform = rectTransform_Origine = GetComponent<RectTransform>();
+        }
+        else Debug.LogError("non trouver");
+
+    }
     public void UI_Lance_Animation(string rr)
     {
         if(Securiser==false)
-        { 
-            switch(rr)
+        {
+            switch (rr)
             {
                 case "Scene_Vats":
+                    Action_Animation = "Eject_Carte"; //la en note quelle ordre en strig a distribuer au autres carte
+                    zz.SetTrigger("Trigger_Bouton_Agrandir");
                     StartCoroutine("Delay_enlever_les_carte");
+                    break;
 
-                    Invoke("UI_Load_Game", 3);
+                case "Remêttre_les_cartes":
+                    Action_Animation = "Ré-integre_la_carte"; //la en note quelle ordre en strig a distribuer au autres carte
+                    StartCoroutine("Delay_enlever_les_carte");
+                    break;
+
+                case "Ré_integre_la_carte":
+                    Debug.Log("I win");
+                    zz.SetTrigger("Trigger_Bouton_Ajouter");
                     break;
 
                 case "Eject_Carte":
+                    Securiser = true;
                     zz.SetTrigger("Trigger_Bouton_delete");
+                    Invoke("securiserBool", 2);
                     break;
             }
         }
     }
-
+    
     private IEnumerator Delay_enlever_les_carte()
     {
         Stack_Script = FindObjectsOfType<S_Game_Principale>();
-        
         int i = 0;
         while (i < Stack_Script.Length && Stack_Script[i] != this)
         {
-            Stack_Script[i].UI_Lance_Animation("Eject_Carte");
+            yield return new WaitForSecondsRealtime(0.1f);
+            Stack_Script[i].UI_Lance_Animation(Action_Animation);
             i++;
-            yield return new WaitForSecondsRealtime(0.5f);
         }
+        Securiser = false;
     }
 
-    void UI_Rend_Visible_la_carte()
+    void pourchasseTarget()
     {
-
+        if(transform_Central!=null)
+            //rectTransform.SetPosition(Vector2.Lerp(this.transform.position, transform_Central.transform.position, Time.deltaTime * 3));
+        //this.transform.position = Vector2.Lerp(this.transform.position, transform_Central.transform.position, Time.deltaTime * 3);
     }
-    void UI_Rend_Invisible_la_carte()
+    private void Update()
     {
-        
+        pourchasseTarget();
     }
 
-    public void UI_Load_Game(string name_Scene)
+    public void UI_Load_Game()
     {
-        if(name_Scene != null && name_Scene == "Scene_Vats") SceneManager.LoadScene(name_Scene);
+        SceneManager.LoadScene("Scene_Vats");
     }
 
     public void UI_ExitGame()
