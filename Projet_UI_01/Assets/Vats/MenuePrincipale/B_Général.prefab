@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5049158169130009246}
   - component: {fileID: 7788215633010981092}
   - component: {fileID: 64991707540174851}
+  - component: {fileID: 1806668477342087698}
   m_Layer: 5
   m_Name: "B_G\xE9n\xE9ral"
   m_TagString: Untagged
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462655fcc8b73e49b7f99413367a7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform_Central: {fileID: 0}
+  Stack_Script: []
 --- !u!95 &64991707540174851
 Animator:
   serializedVersion: 7
@@ -157,3 +158,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &1806668477342087698
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044721828701357266}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

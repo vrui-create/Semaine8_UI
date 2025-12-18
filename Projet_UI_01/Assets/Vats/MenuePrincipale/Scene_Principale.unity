@@ -242,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185170393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Trigger_Bouton_delete
+      value: S
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -492,6 +492,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Ref_Prefable
+      value: 
+      objectReference: {fileID: 4893340369915510583, guid: ae8754c4b3ae28a4e80e196410529416, type: 3}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Stack_Script.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8664782070149746032}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1782827928}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[2]'
+      value: 
+      objectReference: {fileID: 418954776}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[3]'
+      value: 
+      objectReference: {fileID: 880658965}
     - target: {fileID: 8044721828701357266, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_Name
       value: B_Option
@@ -771,7 +795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Eject_carte
+      value: S
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -857,6 +881,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Ref_Prefable
+      value: 
+      objectReference: {fileID: 1882798173056213778, guid: 9438308ae343c624ebe27818d1db53d3, type: 3}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Stack_Script.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8664782070149746032}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1782827928}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[2]'
+      value: 
+      objectReference: {fileID: 748235540}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[3]'
+      value: 
+      objectReference: {fileID: 418954776}
     - target: {fileID: 8044721828701357266, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_Name
       value: B_Credit
@@ -924,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Trigger_Bouton_delete
+      value: S
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1010,6 +1058,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Ref_Prefable
+      value: 
+      objectReference: {fileID: 6706844337688897031, guid: 11e7c010f7e3d8a4fb1c75c52bf73022, type: 3}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Stack_Script.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8664782070149746032}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1782827928}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[2]'
+      value: 
+      objectReference: {fileID: 748235540}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[3]'
+      value: 
+      objectReference: {fileID: 880658965}
     - target: {fileID: 8044721828701357266, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_Name
       value: B_Exit
@@ -1182,7 +1254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Trigger_Bouton_delete
+      value: S
       objectReference: {fileID: 0}
     - target: {fileID: 5049158169130009246, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1268,6 +1340,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Ref_Prefable
+      value: 
+      objectReference: {fileID: 4614124268074254606, guid: 5bdcaa1387794b44ca500ebe648bc43b, type: 3}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Stack_Script.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8664782070149746032}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[1]'
+      value: 
+      objectReference: {fileID: 748235540}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[2]'
+      value: 
+      objectReference: {fileID: 418954776}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[3]'
+      value: 
+      objectReference: {fileID: 880658965}
     - target: {fileID: 8044721828701357266, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_Name
       value: B_Journal
@@ -1592,6 +1688,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Ref_Prefable
+      value: 
+      objectReference: {fileID: 6534806872733314978, guid: 51a9003040ac667458309fce89e264c1, type: 3}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: Stack_Script.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1782827928}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[1]'
+      value: 
+      objectReference: {fileID: 748235540}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[2]'
+      value: 
+      objectReference: {fileID: 418954776}
+    - target: {fileID: 7788215633010981092, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
+      propertyPath: 'Stack_Script.Array.data[3]'
+      value: 
+      objectReference: {fileID: 880658965}
     - target: {fileID: 8044721828701357266, guid: ac1feee7bbafc9f4884d03ee7ec75676, type: 3}
       propertyPath: m_Name
       value: B_Commencer
