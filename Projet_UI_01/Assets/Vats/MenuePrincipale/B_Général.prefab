@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stack_Script: []
+  Ref_Prefable: {fileID: 0}
 --- !u!95 &64991707540174851
 Animator:
   serializedVersion: 7

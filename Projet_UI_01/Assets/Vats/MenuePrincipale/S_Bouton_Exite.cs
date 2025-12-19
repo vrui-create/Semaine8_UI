@@ -7,22 +7,22 @@ public class S_Game_Principale : MonoBehaviour, IPointerEnterHandler, IPointerEx
 {
     [SerializeField] bool Securiser {set; get; }
     GameObject Target_move;
-    Transform Self;
+    Vector2 Self_Position;
 
     [SerializeField]S_Game_Principale[] Stack_Script;
     [SerializeField] GameObject Ref_Prefable;
-    bool Deplacement_au_centre;
-    string Action_Animation;
+    public bool Deplacement_au_centre { set; get; }
+    public string Action_Animation { set; get; }
     Rigidbody2D _rb;
     Animator zz;
 
     void Start()
     {
-        if (zz == null) Debug.LogWarning($"Attention un animator n'est pas présent, veiller a vêrifier dans {this}");
         Target_move = GameObject.Find("Target_Center");
         _rb = GetComponent <Rigidbody2D>();
         zz = GetComponent<Animator>();
-        Self = this.transform;
+        if (zz == null) Debug.LogWarning($"Attention un animator n'est pas présent, veiller a vêrifier dans {this}");
+        Self_Position = _rb.position;
         Deplacement_au_centre = false;
         Securiser = false;
     }
@@ -58,11 +58,16 @@ public class S_Game_Principale : MonoBehaviour, IPointerEnterHandler, IPointerEx
                 case "Eject_Carte":
                     Securiser = true;
                     zz.SetTrigger("Trigger_Bouton_delete");
-                    Invoke("securiserBool", 2);
+                    Invoke("securiser", 2);
                     break;
             }
         }
-        else Debug.LogError("securiser activer");
+        else Debug.LogWarning("securiser activer");
+    }
+    void securiser()
+    {
+        Securiser = false;
+        _rb.position = Self_Position;
     }
     
     private IEnumerator Delay_enlever_les_carte()
@@ -89,15 +94,20 @@ public class S_Game_Principale : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (Target_move != null && Deplacement_au_centre)
         {
-            float ERT = Vector2.Distance(Target_move.transform.position, Self.position);
+            float ERT = Vector2.Distance(Target_move.transform.position, this.transform.position);
             if(ERT <= 120)
+            {
+                Deplacement_au_centre = false;
                 zz.SetTrigger("Trigger_Bouton_Agrandir");
+                Invoke("securiser", 2);
+            }
             _rb.position = Vector2.Lerp(this.transform.position, Target_move.transform.position, Time.deltaTime * 8);
         }
     }
 
     public void instance_Prefable()
     {
+        print("errr");
         GameObject OP = GameObject.Find("Canvas");
         GameObject RR = GameObject.Instantiate(Ref_Prefable, OP.transform);
     }
